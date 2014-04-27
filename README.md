@@ -5,14 +5,15 @@ A "Getting and Cleaning Data" Coursera Class Repository.
 
 Description of a "flow" of the run_analysis.R script. For other details, see the script in thir repository.
 
-## Firstly, working directories containing "UCI HAR Dataset" directory, is set with the setwd() call. The "UCI HAR Dataset" file is nested, it consists of two directories, "train" and "test" ones. The setwd() call is repeated to 
-## Then the test set ()
+Firstly, working directories containing "UCI HAR Dataset" directory, is set with the setwd() call. The "UCI HAR Dataset" file is nested, it consists of two directories, "train" and "test" ones. The setwd() call is repeated in order to set the working directory to "train" and "test" directory.
 
-# setting a working directory
-# loading test sets
-# setting a working directory
-# loading train sets
-# setting a working directory
+Then the "subject_test.txt", "X_test.txt" and "y_test.txt"
+
+setting a working directory
+loading test sets
+setting a working directory
+loading train sets
+setting a working directory
 
 # loading names of variables of the test and train sets
 # loading names of values describing activities
