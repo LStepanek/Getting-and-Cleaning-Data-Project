@@ -115,4 +115,7 @@ head(data)
 tail(data)
 
 
+# the processed dataframe is saved into a file called "processed_data_frame.txt"
+write.table(data,file="processed_data_frame.txt")
+
 
