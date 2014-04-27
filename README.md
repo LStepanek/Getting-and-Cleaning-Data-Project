@@ -7,18 +7,15 @@ Description of a "flow" of the run_analysis.R script. For other details, see the
 
 Firstly, working directories containing "UCI HAR Dataset" directory, is set with the setwd() call. The "UCI HAR Dataset" file is nested, it consists of two directories, "train" and "test" ones. The setwd() call is repeated in order to set the working directory to "train" and "test" directory.
 
-Then the "subject_test.txt", "X_test.txt" and "y_test.txt"
+Then the "subject_test.txt", "X_test.txt" and "y_test.txt" are loaded with the call read.table() and separator "" from the directory "test", and the files "subject_train.txt", "X_train.txt" and "y_train.txt" are loaded with the same call from the directory "train".
 
-setting a working directory
-loading test sets
-setting a working directory
-loading train sets
-setting a working directory
+Names of variables were loaded from "features.txt" file located in "UCI HAR Dataset" directory (with the same call as above) and the labels describing activities were loaded from the same directory.
 
-# loading names of variables of the test and train sets
-# loading names of values describing activities
+The "test_set" dataframe is created by the means of merging "subject_test.txt", "X_test.txt" and "y_test.txt", respectively by the call cbind(). The class the test set is "data.frame".
 
-# merging of the test and train set into dataframes
+The "train_set" dataframe is created by the same way.
+
+The bothe "test_set" and "train_set" dataframes are merged into one large dataframe called "data_set" with using of call rbind().
 
 
 # creating one dataframe of the test and train sets
