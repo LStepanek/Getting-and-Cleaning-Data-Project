@@ -43,7 +43,7 @@ str(train_set)
 data_set<-rbind(test_set,train_set)
 colnames(data_set)<-c("subject",features[,2],"activity")
 
-# substracting of dataframe which is free of (does not include) "meanFreq" variables into new dataframe called "data"
+# extracting of dataframe which is free of (does not include) "meanFreq" variables into new dataframe called "data"
 data<-data_set[,-grep("^(.*)meanFreq(.*)$",colnames(data_set))]
 
 # which variables do include mean or std?
