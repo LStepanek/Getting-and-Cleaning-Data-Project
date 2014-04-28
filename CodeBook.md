@@ -26,8 +26,8 @@ data_set = a dataframe merged of the test_set and train_set dataframes, respecti
 
 data = a dataframe extracted from "data_set" dataframe, does not include variables with "meanFreq" string in their names, does include only "subject" labeled variable, variables with "mean" (but nor "meanFreq") or "std" strings in their names originated from the "data_set" dataframe and the last, "activity" labeled variable.
 
-tidy = a dataframe 
+tidy = a dataframe created from the "data" dataframe. The colnames of the dataframe are the same as colnames of "data" dataframe, rownames are different. The rownames are in the form "subject" + "number of the subject" + ":" + "activity of the subject". Columns (variables) of this dataframe are the same variables as the columns (variables) of the "data" dataframe, its rows are average values of each variable for each activity and each subject.
 
-row = 
+row = dummy variable (consists of means of each variable for one subject and one activity of this subject) in "for" loop by which "tidy" dataframe is created.
 
 For more details, see the script "run_analysis.R".
