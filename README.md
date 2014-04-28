@@ -21,22 +21,23 @@ Then, a dataframe which is free of (does not include) "meanFreq" variables is cr
 
 data<-data_set[,-grep("^(.*)meanFreq(.*)$",colnames(data_set))]
 
-After that, the variables that include "mean" (but not meanFreq) or "std" string in their names are extracted with using grep() and regular expressions.
+After that, the variables that include "mean" (but not meanFreq) or "std" string in their names are extracted with using grep() and regular expressions:
+
+colnames(data)[grep("^(.*)mean(.*)$",colnames(data))]
+colnames(data)[grep("^(.*)std(.*)$",colnames(data))]
 
 
-# which variables do include mean or std?
-# checking the indices of the variables including mean or std
-# updated "data" dataframe in order to include only "mean" or "std" variables and "subject" and "activity" variable
+The "data" dataframe is then updated in order to include only "subject" variable, then "mean" or "std" labeled variables and last the "activity" labeled variable.
 
-# final data frame
+A dataframe which follows tidy data model is created now. Is called "tidy" and its columns (variables) are the same variables with the "data" dataframe columns, Its rows are avereage values of each variable for each activity and each subject.
 
-# "tidy data", with the average of each variable for each activity and each subject
-# colnames of "tidy" dataframe
-# rownames of "tidy" dataframe
-# saving the "tidy" dataframe as a text table
-# using descriptive labels for "activity" variable of the "data" dataframe
+The "tidy" dataframe is created by the "for" loop (see the script). The colnames of the dataframe are the same as colnames of "data" dataframe, rownames are different. The rownames ar created by the same loop "for" as the "tidy" dataframe is and by the paste() call.
 
 
+Finally the "tidy" dataframe is saved into "tidy_data.txt" file.
 
+The last step is labeling values of "activtiy" variable by its describing names, it is performed with the "for" loop which replaces the numbers 1-6 by the correct names of the activity.
+
+At the end, the processed "data" dataframe is saved into a file called "processed_data_frame.txt".
 
 
